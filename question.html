@@ -1,0 +1,31 @@
+<body>
+<h1>
+Are you ready for questions 
+</h1>
+<button onclick="my()">click to start </button>
+<script>
+function my(){
+const questions = [
+  "What's your favorite hobby?",
+  "What's one thing you're grateful for today?",
+  "What's the best book you've read recently?",
+  "What's one goal you're working towards right now?",
+  "If you could have any superpower, what would it be?",
+  "What's your favorite type of music?",
+  "What's one thing you've always wanted to learn?",
+  "What's your favorite place you've ever traveled to?",
+  "What's the best meal you've ever had?",
+  "What's one thing you do every day to improve your well-being?"
+];
+
+function getRandomQuestion() {
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  return questions[randomIndex];
+}
+
+while (true) {
+  const question = getRandomQuestion();
+  const answer = prompt(question);
+  document.write(`Your answer to "${question}" was: ${answer}`);
+}}
+</script>
